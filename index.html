@@ -364,6 +364,11 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
   color:var(--grey);line-height:1.8;max-width:15em;
 }
 
+/* ---------- full-width rendering band ---------- */
+.showcase{background:var(--paper)}
+.showcase .mask{height:clamp(360px,60vh,640px)}
+.showcase img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+
 /* ---------- partnership (dark) ---------- */
 
 .partnership{background:var(--ink);color:var(--paper)}
@@ -382,13 +387,12 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 }
 .partnership__copy.is-in .goldrule{transform:scaleX(1)}
 .partnership__marks{
-  margin-top:clamp(64px,7vw,110px);
+  margin-top:clamp(56px,6vw,88px);
   border-top:1px solid var(--hairline-light);
   padding-top:clamp(44px,5vw,72px);
   display:flex;align-items:center;justify-content:space-between;
   gap:40px;flex-wrap:wrap;
 }
-.partnership__marks .label{flex-basis:100%;margin-bottom:8px}
 .partnership__mark{
   flex:1;display:flex;align-items:center;justify-content:center;
   min-width:240px;padding:18px 0;
@@ -399,10 +403,10 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 
 /* ---------- quotes ---------- */
 
-.quotes .siteline{margin-bottom:clamp(56px,7vw,104px)}
+.quotes .siteline{margin-bottom:clamp(36px,4vw,56px)}
 .quote{
   max-width:880px;
-  padding:clamp(48px,6vw,84px) 0;
+  padding:clamp(36px,4vw,56px) 0;
   border-bottom:1px solid var(--hairline);
 }
 .quote:first-of-type{border-top:1px solid var(--hairline)}
@@ -721,6 +725,13 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
   </div>
 </section>
 
+<!-- Full-width rendering band -->
+<section class="showcase" aria-label="Parkline Apartments rendering">
+  <div class="mask" data-mask>
+    <img src="render-park.jpg" alt="Architectural rendering of Parkline Apartments seen from across the street at dusk, showing the full 10-storey elevation and brick podium" width="2000" height="1116" loading="lazy">
+  </div>
+</section>
+
 <!-- 5 · Landmark partnership -->
 <section class="section partnership" id="partnership" aria-label="Landmark partnership">
   <div class="wrap">
@@ -736,8 +747,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
       </div>
     </div>
     <div class="partnership__marks">
-      <p class="label label--light" data-reveal>In Partnership With</p>
-      <div class="partnership__mark" data-reveal style="--d:.12s">
+      <div class="partnership__mark" data-reveal>
         <img src="logo-elite-white.png" alt="Elite Developments" width="1000" height="272">
       </div>
       <span class="partnership__divider" aria-hidden="true"></span>
@@ -788,7 +798,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 <!-- 7 · Downtown impact -->
 <section class="impact" aria-label="Downtown impact">
   <div class="impact__media">
-    <img src="render-park.jpg" alt="Architectural rendering of Parkline Apartments viewed across open green space at sunset, downtown Niagara Falls" width="2200" height="1228" loading="lazy" data-parallax>
+    <img src="niagara-falls.jpg" alt="Aerial view of Niagara Falls and the surrounding downtown, with the American Falls, the Niagara River and the city beyond" width="2200" height="1468" loading="lazy" data-parallax>
     <div class="scrim" aria-hidden="true"></div>
     <div class="impact__heading">
       <div class="wrap">
@@ -824,7 +834,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
       <div class="gallery__row">
         <figure class="gfig g-full">
           <div class="mask" data-mask>
-            <img src="gb-group.jpg" alt="A large group of project partners turning soil with gold shovels at the Parkline Apartments groundbreaking ceremony" width="2000" height="1335" loading="lazy">
+            <img src="gb-group.jpg" alt="Project partners lined up with gold shovels at a mound of soil during the Parkline Apartments groundbreaking ceremony at 4500 Park Street" width="2000" height="1335" loading="lazy">
           </div>
           <figcaption>Official groundbreaking at 4500 Park Street</figcaption>
         </figure>
@@ -833,52 +843,45 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
       <div class="gallery__row">
         <figure class="gfig g-a1">
           <div class="mask" data-mask>
-            <img src="gb-aerial.jpg" alt="Aerial view of the groundbreaking ceremony site at 4500 Park Street, with the event tent and excavators below" width="1000" height="1778" loading="lazy">
+            <img src="gb-aerial.jpg" alt="Aerial view of the Parkline Apartments groundbreaking, with guests gathered in a semicircle around the ceremonial soil and excavators on the cleared Park Street site" width="1000" height="1778" loading="lazy">
           </div>
           <figcaption>The ceremony from above</figcaption>
         </figure>
         <figure class="gfig g-a2">
           <div class="mask" data-mask>
-            <img src="gb-shovels.jpg" alt="A row of Elite Developments branded gold shovels standing in the soil before the ceremony" width="1400" height="935" loading="lazy">
+            <img src="gb-shovels.jpg" alt="An excavator reaching across the cleared 4500 Park Street site, with Elite Developments, Parkline Apartments, City of Niagara Falls and Brooklyn Construction banners along the hoarding" width="1400" height="935" loading="lazy">
           </div>
-          <figcaption>Ready to break ground</figcaption>
+          <figcaption>Work begins on the Park Street site</figcaption>
         </figure>
       </div>
 
       <div class="gallery__row">
         <figure class="gfig g-b1">
           <div class="mask" data-mask>
-            <img src="gb-backdrop.jpg" alt="Representatives from Elite Developments and the City of Niagara Falls holding shovels in front of the partnership backdrop" width="1400" height="935" loading="lazy">
+            <img src="gb-partners.jpg" alt="Four project partners standing together in front of the Elite Developments and City of Niagara Falls backdrop at the groundbreaking celebration" width="1600" height="1068" loading="lazy">
           </div>
           <figcaption>Representatives from Elite Developments, the City of Niagara Falls and project partners</figcaption>
         </figure>
         <figure class="gfig g-b2">
           <div class="mask" data-mask>
-            <img src="gb-podium.jpg" alt="A speaker addressing guests at the podium during the Parkline Apartments groundbreaking ceremony" width="1000" height="1500" loading="lazy">
+            <img src="gb-tent.jpg" alt="A black Elite Developments hard hat resting on a ceremonial shovel in front of the Parkline Apartments banner" width="1400" height="933" loading="lazy">
           </div>
+          <figcaption>Ready to break ground</figcaption>
         </figure>
       </div>
 
       <div class="gallery__row">
         <figure class="gfig g-c1">
           <div class="mask" data-mask>
-            <img src="gb-shovel-close.jpg" alt="Close-up of an Elite Developments branded shovel standing in freshly turned earth" width="1000" height="1500" loading="lazy">
+            <img src="gb-podium.jpg" alt="The event backdrop repeating the Elite Developments and City of Niagara Falls marks at the Parkline Apartments groundbreaking" width="1000" height="1500" loading="lazy">
           </div>
+          <figcaption>A shared identity</figcaption>
         </figure>
         <figure class="gfig g-c2">
           <div class="mask" data-mask>
-            <img src="gb-signage.jpg" alt="An excavator beside Park Street project signage featuring the City of Niagara Falls and Elite Developments marks" width="1400" height="935" loading="lazy">
+            <img src="gb-backdrop.jpg" alt="Three project partners in conversation beside a CAT excavator at the 4500 Park Street groundbreaking" width="1400" height="935" loading="lazy">
           </div>
-          <figcaption>Work begins on Park Street</figcaption>
-        </figure>
-      </div>
-
-      <div class="gallery__row">
-        <figure class="gfig g-d">
-          <div class="mask" data-mask>
-            <img src="gb-tent.jpg" alt="Guests and project partners gathered under the event tent at the groundbreaking celebration" width="1400" height="933" loading="lazy">
-          </div>
-          <figcaption>A landmark partnership taking shape in downtown Niagara Falls</figcaption>
+          <figcaption>On site at 4500 Park Street</figcaption>
         </figure>
       </div>
 
