@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Parkline Apartments | Coming Soon to Downtown Niagara Falls</title>
+<meta name="description" content="Parkline Apartments is a new 362-residence purpose-built rental community coming to 4500 Park Street in downtown Niagara Falls through a partnership between Elite Developments and the City of Niagara Falls.">
+
+<!-- Update og:url and og:image to absolute URLs once the final domain is live -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Parkline Apartments">
+<meta property="og:title" content="Parkline Apartments | Coming Soon to Downtown Niagara Falls">
+<meta property="og:description" content="A new 362-residence purpose-built rental community coming to 4500 Park Street in downtown Niagara Falls, in partnership between Elite Developments and the City of Niagara Falls.">
+<meta property="og:image" content="og-parkline.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Parkline Apartments | Coming Soon to Downtown Niagara Falls">
+<meta name="twitter:description" content="A new 362-residence purpose-built rental community coming to 4500 Park Street in downtown Niagara Falls.">
+<meta name="twitter:image" content="og-parkline.jpg">
+
+<meta name="theme-color" content="#FAF8F5">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="render-hero.jpg" media="(min-width: 701px)">
+<link rel="preload" as="image" href="render-hero-1100.jpg" media="(max-width: 700px)">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  "name": "Parkline Apartments",
+  "description": "A new 362-residence, 10-storey purpose-built rental community coming to 4500 Park Street in downtown Niagara Falls, developed through a partnership between Elite Developments and the City of Niagara Falls.",
+  "numberOfAccommodationUnits": 362,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4500 Park Street",
+    "addressLocality": "Niagara Falls",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "telephone": "+1-844-484-4184",
+  "email": "sales@elitedevelopments.com"
+}
+</script>
+
+<style>
+/* ============================================================
+   PARKLINE APARTMENTS  ·  Coming Soon
+   Design system: warm architectural white, deep charcoal,
+   soft stone, a single restrained line of Elite gold.
+   ============================================================ */
+
+:root{
+  --paper:#FAF8F5;
+  --paper-92:rgba(250,248,245,.92);
+  --ink:#161512;
+  --ink-soft:#2A2824;
+  --stone:#E9E4DC;
+  --stone-deep:#D8D2C7;
+  --grey:#85817A;
+  --gold:#CB9700;
+  --hairline:rgba(22,21,18,.14);
+  --hairline-light:rgba(250,248,245,.22);
+  --max:1440px;
+  --gutter:clamp(20px,4.5vw,72px);
+  --ease:cubic-bezier(.22,.61,.2,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html:focus-within{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
+
+::selection{background:var(--ink);color:var(--paper)}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:300;
+  background:var(--ink);color:var(--paper);
+  padding:12px 20px;font-size:14px;letter-spacing:.04em;
+}
+.skip-link:focus{left:16px;top:16px}
+
+/* ---------- shared type ---------- */
+
+.label{
+  font-size:11px;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--grey);
+}
+.label--ink{color:var(--ink)}
+.label--light{color:rgba(250,248,245,.66)}
+
+h1,h2,h3{font-weight:400;letter-spacing:-.02em}
+
+.display{
+  font-size:clamp(40px,6vw,84px);
+  line-height:1.04;
+  letter-spacing:-.03em;
+  font-weight:400;
+}
+.heading{
+  font-size:clamp(30px,3.6vw,52px);
+  line-height:1.12;
+  letter-spacing:-.025em;
+  font-weight:400;
+}
+.lede{
+  font-size:clamp(17px,1.4vw,20px);
+  line-height:1.75;
+  color:var(--ink-soft);
+}
+.body-copy p{margin-bottom:1.4em}
+.body-copy p:last-child{margin-bottom:0}
+
+/* ---------- layout ---------- */
+
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.section{padding:clamp(88px,11vw,168px) 0}
+#project,#partnership,#groundbreaking,#contact{scroll-margin-top:76px}
+
+/* survey line: the recurring site-line motif */
+.siteline{
+  display:flex;align-items:center;gap:18px;
+  margin-bottom:clamp(40px,5vw,72px);
+}
+.siteline::after{
+  content:"";flex:1;height:1px;background:var(--hairline);
+  transform-origin:left;
+}
+.siteline--light::after{background:var(--hairline-light)}
+.siteline .tick{width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg);flex:none}
+
+/* ---------- preloader ---------- */
+
+.loader{
+  position:fixed;inset:0;z-index:200;
+  background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform 1s var(--ease),visibility 0s 1s;
+}
+.loader__logo{width:min(300px,56vw);overflow:hidden}
+.loader__logo img{
+  clip-path:inset(0 100% 0 0);
+  animation:logoReveal 1.1s var(--ease) .15s forwards;
+}
+@keyframes logoReveal{to{clip-path:inset(0 0 0 0)}}
+.is-loaded .loader{transform:translateY(-100%);visibility:hidden}
+
+/* ---------- navigation ---------- */
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:130;
+  transition:background .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease);
+  border-bottom:1px solid transparent;
+  background:linear-gradient(to bottom,rgba(250,248,245,.55),rgba(250,248,245,0));
+}
+.nav.is-solid{
+  background:var(--paper-92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom-color:var(--hairline);
+}
+.nav__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:76px;
+}
+.nav__logo img{height:30px;width:auto}
+.nav__links{display:flex;gap:clamp(24px,3vw,44px);list-style:none}
+.nav__links a{
+  font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  position:relative;padding:6px 0;
+}
+.nav__links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--ink);transform:scaleX(0);transform-origin:right;
+  transition:transform .45s var(--ease);
+}
+.nav__links a:hover::after,.nav__links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+.nav__burger{display:none;flex-direction:column;gap:6px;padding:10px 2px;z-index:130}
+.nav__burger span{display:block;width:26px;height:1.5px;background:var(--ink);transition:transform .45s var(--ease),opacity .3s}
+.nav__burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav__burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav__burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+.menu{
+  position:fixed;inset:0;z-index:120;background:var(--paper);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 var(--gutter);
+  visibility:hidden;opacity:0;
+  transition:opacity .5s var(--ease),visibility 0s .5s;
+}
+.menu.is-open{visibility:visible;opacity:1;transition:opacity .5s var(--ease)}
+.menu ul{list-style:none;border-top:1px solid var(--hairline)}
+.menu li{border-bottom:1px solid var(--hairline)}
+.menu a{
+  display:block;padding:22px 4px;
+  font-size:clamp(26px,7vw,38px);letter-spacing:-.02em;
+  transform:translateY(18px);opacity:0;
+  transition:transform .7s var(--ease),opacity .7s var(--ease);
+}
+.menu.is-open a{transform:none;opacity:1}
+.menu.is-open li:nth-child(1) a{transition-delay:.10s}
+.menu.is-open li:nth-child(2) a{transition-delay:.17s}
+.menu.is-open li:nth-child(3) a{transition-delay:.24s}
+.menu.is-open li:nth-child(4) a{transition-delay:.31s}
+.menu__meta{margin-top:44px;color:var(--grey);font-size:14px;line-height:2}
+
+/* ---------- hero ---------- */
+
+.hero{
+  position:relative;height:100svh;min-height:640px;
+  display:flex;align-items:flex-end;
+  overflow:hidden;color:var(--paper);
+}
+.hero__media{position:absolute;inset:0;overflow:hidden}
+.hero__media img{
+  width:100%;height:100%;object-fit:cover;object-position:center 42%;
+  transform:scale(1.04);
+  transition:transform 2.4s var(--ease);
+}
+.is-loaded .hero__media img{transform:scale(1)}
+.hero__scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(14,13,11,.62) 0%,rgba(14,13,11,.18) 38%,rgba(14,13,11,0) 62%);
+}
+.hero__content{
+  position:relative;width:100%;
+  padding-bottom:clamp(56px,8vh,110px);
+}
+.hero .label{color:rgba(250,248,245,.78);margin-bottom:22px}
+.hero h1{
+  font-size:clamp(46px,7.4vw,104px);
+  line-height:1;letter-spacing:-.03em;font-weight:400;
+  margin-bottom:22px;
+}
+.hero__sub{
+  font-size:clamp(16px,1.5vw,20px);line-height:1.6;
+  max-width:34em;color:rgba(250,248,245,.88);
+  margin-bottom:34px;
+}
+.hero__row{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.hero__facts{
+  display:flex;gap:14px;align-items:center;
+  font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(250,248,245,.66);flex-wrap:wrap;
+}
+.hero__facts span.dot{width:3px;height:3px;background:var(--gold);border-radius:50%}
+
+.btn{
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:12.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  padding:16px 28px;border:1px solid rgba(250,248,245,.5);
+  color:var(--paper);
+  transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease);
+}
+.btn svg{transition:transform .5s var(--ease)}
+.btn:hover,.btn:focus-visible{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn:hover svg,.btn:focus-visible svg{transform:translateY(3px)}
+
+.btn--ink{border-color:rgba(22,21,18,.4);color:var(--ink)}
+.btn--ink:hover,.btn--ink:focus-visible{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+.hero__scroll{
+  position:absolute;right:var(--gutter);bottom:clamp(56px,8vh,110px);
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  color:rgba(250,248,245,.7);
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  writing-mode:vertical-rl;
+}
+.hero__scroll::after{
+  content:"";width:1px;height:56px;
+  background:linear-gradient(to bottom,rgba(250,248,245,.8),rgba(250,248,245,.1));
+  animation:scrollPulse 2.6s var(--ease) infinite;
+}
+@keyframes scrollPulse{
+  0%{transform:scaleY(0);transform-origin:top}
+  45%{transform:scaleY(1);transform-origin:top}
+  55%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* ---------- partner strip ---------- */
+
+.partners{border-bottom:1px solid var(--hairline);background:var(--paper)}
+.partners__inner{
+  display:flex;align-items:center;justify-content:center;
+  gap:clamp(28px,5vw,72px);
+  padding:clamp(36px,4.5vw,56px) 0;
+  flex-wrap:wrap;
+}
+.partners__inner .label{letter-spacing:.28em}
+.partners__logos{display:flex;align-items:center;gap:clamp(28px,4vw,64px)}
+.partners__logos .rule{width:1px;height:44px;background:var(--hairline)}
+.partners__logos img{height:clamp(30px,3.4vw,44px);width:auto}
+.partners__logos img.nf{height:clamp(38px,4.2vw,54px)}
+
+/* ---------- project introduction ---------- */
+
+.intro__grid{
+  display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(24px,3vw,48px);align-items:center;
+}
+.intro__text{grid-column:1/6}
+.intro__text .heading{margin:20px 0 30px;max-width:11em}
+.intro__media{grid-column:7/13}
+.intro__caption{margin-top:14px;font-size:12.5px;color:var(--grey);letter-spacing:.06em}
+
+/* image mask reveal */
+.mask{overflow:hidden;position:relative}
+.mask img{transform:scale(1.06);transition:transform 1.5s var(--ease)}
+.mask::after{
+  content:"";position:absolute;inset:0;background:var(--stone);
+  transform:scaleX(1);transform-origin:right;
+  transition:transform 1.15s var(--ease);
+}
+.mask.is-in::after{transform:scaleX(0)}
+.mask.is-in img{transform:scale(1)}
+.mask--dark::after{background:var(--ink-soft)}
+
+/* ---------- facts ledger ---------- */
+
+.facts{border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:var(--paper)}
+.facts__grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{
+  padding:clamp(44px,5vw,84px) clamp(20px,2.6vw,48px);
+  border-left:1px solid var(--hairline);
+}
+.fact:first-child{border-left:0;padding-left:0}
+.fact__num{
+  font-size:clamp(56px,6.2vw,104px);
+  font-weight:300;letter-spacing:-.04em;line-height:1;
+  margin-bottom:18px;
+  font-variant-numeric:tabular-nums;
+}
+.fact__num sup{font-size:.45em;font-weight:400;top:-.9em;position:relative;color:var(--gold)}
+.fact__label{
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--grey);line-height:1.8;max-width:15em;
+}
+
+/* ---------- partnership (dark) ---------- */
+
+.partnership{background:var(--ink);color:var(--paper)}
+.partnership .heading{color:var(--paper);max-width:12em}
+.partnership__grid{
+  display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(24px,3vw,48px);
+}
+.partnership__lead{grid-column:1/7}
+.partnership__copy{grid-column:8/13;color:rgba(250,248,245,.78)}
+.partnership__copy .goldrule{
+  width:56px;height:1px;background:var(--gold);
+  margin-bottom:30px;
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 1.1s var(--ease) .3s;
+}
+.partnership__copy.is-in .goldrule{transform:scaleX(1)}
+.partnership__marks{
+  margin-top:clamp(64px,7vw,110px);
+  border-top:1px solid var(--hairline-light);
+  padding-top:clamp(44px,5vw,72px);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:40px;flex-wrap:wrap;
+}
+.partnership__marks .label{flex-basis:100%;margin-bottom:8px}
+.partnership__mark{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  min-width:240px;padding:18px 0;
+}
+.partnership__mark img{height:clamp(38px,4.4vw,56px);width:auto}
+.partnership__mark img.nf{height:clamp(46px,5.2vw,66px)}
+.partnership__divider{width:1px;align-self:stretch;background:var(--hairline-light)}
+
+/* ---------- quotes ---------- */
+
+.quotes .siteline{margin-bottom:clamp(56px,7vw,104px)}
+.quote{
+  max-width:880px;
+  padding:clamp(48px,6vw,84px) 0;
+  border-bottom:1px solid var(--hairline);
+}
+.quote:first-of-type{border-top:1px solid var(--hairline)}
+.quote:nth-of-type(even){margin-left:auto}
+.quote blockquote{
+  font-size:clamp(22px,2.6vw,36px);
+  line-height:1.38;letter-spacing:-.015em;font-weight:400;
+  color:var(--ink);
+  text-indent:-.45em;
+}
+.quote figcaption{
+  margin-top:34px;display:flex;flex-direction:column;gap:3px;
+  font-size:14px;line-height:1.6;
+}
+.quote figcaption::before{
+  content:"";width:40px;height:1px;background:var(--gold);margin-bottom:14px;
+}
+.quote figcaption .name{font-weight:500;letter-spacing:.02em}
+.quote figcaption .role{color:var(--grey);font-size:13px;letter-spacing:.05em}
+
+/* ---------- downtown impact ---------- */
+
+.impact{padding:0;background:var(--paper)}
+.impact__media{position:relative;height:clamp(420px,78vh,760px);overflow:hidden}
+.impact__media img{
+  width:100%;height:118%;object-fit:cover;object-position:center 60%;
+  will-change:transform;
+}
+.impact__media .scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(14,13,11,.5),rgba(14,13,11,0) 45%);
+}
+.impact__heading{
+  position:absolute;left:0;right:0;bottom:clamp(40px,6vw,80px);
+  color:var(--paper);
+}
+.impact__heading .label{color:rgba(250,248,245,.72);margin-bottom:16px}
+.impact__body{
+  padding:clamp(64px,8vw,120px) 0;
+}
+.impact__body .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,3vw,48px)}
+.impact__body .lede{grid-column:3/11}
+
+/* ---------- groundbreaking ---------- */
+
+.ground{background:var(--stone)}
+.ground__head{max-width:760px}
+.ground__head .heading{margin:20px 0 28px}
+.gallery{margin-top:clamp(56px,7vw,96px);display:flex;flex-direction:column;gap:clamp(28px,4vw,64px)}
+.gallery__row{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(20px,3vw,48px);align-items:start}
+.gfig{margin:0}
+.gfig figcaption{
+  margin-top:14px;font-size:12.5px;color:var(--grey);
+  letter-spacing:.06em;display:flex;gap:12px;align-items:baseline;
+}
+.gfig figcaption::before{content:"";width:18px;height:1px;background:var(--gold);flex:none;position:relative;top:-4px}
+.g-full{grid-column:1/13}
+.g-a1{grid-column:1/6}
+.g-a2{grid-column:6/13;margin-top:clamp(40px,6vw,110px)}
+.g-b1{grid-column:1/8}
+.g-b2{grid-column:9/13;margin-top:clamp(30px,4vw,80px)}
+.g-c1{grid-column:1/5}
+.g-c2{grid-column:5/13;margin-top:clamp(30px,4vw,72px)}
+.g-d{grid-column:3/11}
+
+/* ---------- contact ---------- */
+
+.contact{background:var(--paper);text-align:center}
+.contact .label{margin-bottom:22px}
+.contact .heading{margin-bottom:26px}
+.contact__copy{max-width:38em;margin:0 auto clamp(44px,5vw,64px)}
+.contact__links{
+  display:flex;flex-direction:column;gap:8px;align-items:center;
+  margin-bottom:clamp(44px,5vw,64px);
+}
+.contact__links a{
+  font-size:clamp(22px,3vw,40px);letter-spacing:-.02em;
+  position:relative;padding-bottom:4px;
+}
+.contact__links a::after{
+  content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
+  background:var(--ink);transform:scaleX(0);transform-origin:right;
+  transition:transform .5s var(--ease);
+}
+.contact__links a:hover::after,.contact__links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+/* ---------- footer ---------- */
+
+.footer{border-top:1px solid var(--hairline);background:var(--paper)}
+.footer__top{
+  display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(28px,4vw,56px);
+  padding:clamp(56px,7vw,96px) 0 clamp(40px,5vw,64px);
+}
+.footer__brand{grid-column:1/5}
+.footer__brand img{width:min(230px,60%);height:auto}
+.footer__partners{grid-column:6/10}
+.footer__partners .label{display:block;margin-bottom:24px}
+.footer__partners .marks{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.footer__partners .marks img{height:32px;width:auto}
+.footer__partners .marks img.nf{height:40px}
+.footer__contact{grid-column:10/13;font-size:14.5px;line-height:2;color:var(--ink-soft)}
+.footer__contact a:hover,.footer__contact a:focus-visible{color:var(--gold)}
+.footer__contact .addr{margin-bottom:14px;color:var(--grey)}
+.footer__bottom{
+  border-top:1px solid var(--hairline);
+  padding:26px 0 34px;
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  font-size:12px;color:var(--grey);line-height:1.8;
+}
+.footer__bottom .legal{max-width:56em}
+
+/* ---------- reveal system ---------- */
+
+[data-reveal]{
+  opacity:0;transform:translateY(26px);
+  transition:opacity .95s var(--ease),transform .95s var(--ease);
+  transition-delay:var(--d,0s);
+}
+[data-reveal].is-in{opacity:1;transform:none}
+
+.siteline::after{transform:scaleX(0)}
+.siteline.is-in::after{transform:scaleX(1);transition:transform 1.2s var(--ease) .1s}
+
+/* ---------- responsive ---------- */
+
+@media (max-width:1020px){
+  .intro__grid{grid-template-columns:1fr}
+  .intro__text,.intro__media{grid-column:1/-1}
+  .intro__text .heading{max-width:none}
+  .partnership__lead,.partnership__copy{grid-column:1/-1}
+  .impact__body .lede{grid-column:1/-1}
+  .footer__top{grid-template-columns:1fr 1fr}
+  .footer__brand{grid-column:1/-1}
+  .footer__partners{grid-column:1/2}
+  .footer__contact{grid-column:2/3}
+}
+
+@media (max-width:860px){
+  .facts__grid{grid-template-columns:1fr}
+  .fact{border-left:0;border-top:1px solid var(--hairline);padding-left:0;display:flex;align-items:baseline;justify-content:space-between;gap:24px}
+  .fact:first-child{border-top:0}
+  .fact__num{margin-bottom:0}
+  .fact__label{text-align:right}
+  .nav__links{display:none}
+  .nav__burger{display:flex}
+  .quote:nth-of-type(even){margin-left:0}
+  .gallery__row{grid-template-columns:1fr}
+  .g-a1,.g-a2,.g-b1,.g-b2,.g-c1,.g-c2,.g-d,.g-full{grid-column:1/-1;margin-top:0}
+  .g-a1,.g-c1{max-width:78%}
+  .g-b2{max-width:64%;margin-left:auto}
+  .hero__scroll{display:none}
+}
+
+@media (max-width:620px){
+  .footer__top{grid-template-columns:1fr}
+  .footer__partners,.footer__contact{grid-column:1/-1}
+  .partners__inner{flex-direction:column;gap:24px}
+  .partnership__marks{flex-direction:column;align-items:stretch}
+  .partnership__divider{width:100%;height:1px}
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important;transition-delay:0s !important}
+  [data-reveal]{opacity:1;transform:none}
+  .mask::after{display:none}
+  .mask img{transform:none}
+  .hero__media img{transform:none}
+  .hero__scroll::after{animation:none}
+  .impact__media img{height:100%}
+  .loader{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#project">Skip to content</a>
+
+<!-- Preloader -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__logo">
+    <img src="logo-parkline.png" alt="" width="1400" height="528">
+  </div>
+</div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__logo" href="#top" aria-label="Parkline Apartments, back to top">
+      <img src="logo-parkline.png" alt="Parkline Apartments" width="1400" height="528">
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#project">Project</a></li>
+        <li><a href="#partnership">Partnership</a></li>
+        <li><a href="#groundbreaking">Groundbreaking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#partnership">Partnership</a></li>
+      <li><a href="#groundbreaking">Groundbreaking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="menu__meta">
+    4500 Park Street, Niagara Falls, Ontario<br>
+    <a href="tel:+18444844184">1.844.484.4184</a><br>
+    <a href="mailto:sales@elitedevelopments.com">sales@elitedevelopments.com</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- 1 · Hero -->
+<section class="hero" aria-label="Parkline Apartments, coming soon">
+  <div class="hero__media">
+    <picture>
+      <source media="(max-width:700px)" srcset="render-hero-1100.jpg">
+      <img src="render-hero.jpg" alt="Architectural rendering of Parkline Apartments, a 10-storey purpose-built rental building at 4500 Park Street in downtown Niagara Falls, seen at dusk" width="2200" height="1228" fetchpriority="high">
+    </picture>
+    <div class="hero__scrim" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap hero__content">
+    <p class="label" data-reveal style="--d:.15s">Coming Soon to Downtown Niagara Falls</p>
+    <h1 data-reveal style="--d:.28s">Parkline Apartments</h1>
+    <p class="hero__sub" data-reveal style="--d:.42s">A new purpose-built rental community taking shape at 4500 Park Street.</p>
+    <div class="hero__row" data-reveal style="--d:.56s">
+      <a class="btn" href="#project">
+        Discover Parkline
+        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" aria-hidden="true"><path d="M5.5 0v10.5M1 6.5l4.5 4.5L10 6.5" stroke="currentColor" stroke-width="1.2"/></svg>
+      </a>
+      <p class="hero__facts">
+        <span>362 Residences</span><span class="dot" aria-hidden="true"></span>
+        <span>10 Storeys</span><span class="dot" aria-hidden="true"></span>
+        <span>Downtown Niagara Falls</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- Partner strip -->
+<section class="partners" aria-label="Project partners">
+  <div class="wrap partners__inner">
+    <p class="label" data-reveal>In Partnership With</p>
+    <div class="partners__logos" data-reveal style="--d:.12s">
+      <img src="logo-elite-dark.png" alt="Elite Developments" width="1000" height="272">
+      <span class="rule" aria-hidden="true"></span>
+      <img class="nf" src="logo-nf.svg" alt="City of Niagara Falls" width="820" height="295">
+    </div>
+  </div>
+</section>
+
+<!-- 3 · Project introduction -->
+<section class="section" id="project" aria-label="Project introduction">
+  <div class="wrap">
+    <div class="siteline" data-reveal><span class="tick" aria-hidden="true"></span><span class="label label--ink">The Project</span></div>
+    <div class="intro__grid">
+      <div class="intro__text">
+        <h2 class="heading" data-reveal>A New Chapter for Downtown Niagara&nbsp;Falls</h2>
+        <div class="body-copy lede" data-reveal style="--d:.15s">
+          <p>Elite Developments, in partnership with the City of Niagara Falls, is bringing Parkline Apartments to 4500 Park Street in the heart of downtown Niagara Falls.</p>
+          <p>The 10-storey, purpose-built rental community will introduce 362 new residences designed to support the evolving needs of the city. Twenty per cent of the building will be dedicated to affordable and attainable housing, reinforcing a shared commitment to creating accessible, high-quality and well-located rental options.</p>
+        </div>
+      </div>
+      <div class="intro__media">
+        <figure class="gfig">
+          <div class="mask" data-mask>
+            <img src="render-4500.jpg" alt="Architectural rendering of the Parkline Apartments street-level entrance at 4500 Park Street, with brick detailing and double-height glazing" width="1500" height="851" loading="lazy">
+          </div>
+          <figcaption class="intro__caption">Artist's concept, 4500 Park Street entrance</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Project facts -->
+<section class="facts" aria-label="Project facts">
+  <div class="wrap">
+    <div class="facts__grid">
+      <div class="fact" data-reveal>
+        <p class="fact__num">362</p>
+        <p class="fact__label">Purpose-Built Rental Residences</p>
+      </div>
+      <div class="fact" data-reveal style="--d:.1s">
+        <p class="fact__num">10</p>
+        <p class="fact__label">Storeys</p>
+      </div>
+      <div class="fact" data-reveal style="--d:.2s">
+        <p class="fact__num">20<sup>%</sup></p>
+        <p class="fact__label">Affordable and Attainable Housing</p>
+      </div>
+      <div class="fact" data-reveal style="--d:.3s">
+        <p class="fact__num">4500</p>
+        <p class="fact__label">Park Street, Niagara Falls</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Landmark partnership -->
+<section class="section partnership" id="partnership" aria-label="Landmark partnership">
+  <div class="wrap">
+    <div class="siteline siteline--light" data-reveal><span class="tick" aria-hidden="true"></span><span class="label label--light">The Partnership</span></div>
+    <div class="partnership__grid">
+      <div class="partnership__lead">
+        <h2 class="heading" data-reveal>Built Through Partnership</h2>
+      </div>
+      <div class="partnership__copy body-copy" data-reveal style="--d:.15s">
+        <div class="goldrule" aria-hidden="true"></div>
+        <p>Parkline Apartments represents a landmark collaboration between Elite Developments and the City of Niagara Falls. Through a forward-thinking partnership, the City contributed the land and became a 40 per cent shareholder in the project, helping accelerate new housing supply while creating long-term value for the community.</p>
+        <p>The development demonstrates what can be achieved when the public and private sectors work together toward a shared goal.</p>
+      </div>
+    </div>
+    <div class="partnership__marks">
+      <p class="label label--light" data-reveal>In Partnership With</p>
+      <div class="partnership__mark" data-reveal style="--d:.12s">
+        <img src="logo-elite-white.png" alt="Elite Developments" width="1000" height="272">
+      </div>
+      <span class="partnership__divider" aria-hidden="true"></span>
+      <div class="partnership__mark" data-reveal style="--d:.24s">
+        <img class="nf" src="logo-nf-white.png" alt="City of Niagara Falls" width="820" height="295">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Leadership quotes -->
+<section class="section quotes" aria-label="Leadership perspectives">
+  <div class="wrap">
+    <div class="siteline" data-reveal><span class="tick" aria-hidden="true"></span><span class="label label--ink">In Their Words</span></div>
+
+    <figure class="quote" data-reveal>
+      <blockquote>
+        <p>&ldquo;Niagara Falls has set a standard. You&rsquo;re showing the province what can be achieved when the goal is shared and the process is driven by teamwork.&rdquo;</p>
+      </blockquote>
+      <figcaption>
+        <span class="name">Hamid Hakimi</span>
+        <span class="role">Chief Executive Officer, Elite Developments</span>
+      </figcaption>
+    </figure>
+
+    <figure class="quote" data-reveal>
+      <blockquote>
+        <p>&ldquo;By contributing the land and working collaboratively with Elite Developments, we&rsquo;re delivering a project that adds affordable housing and creates long-term financial value for our residents.&rdquo;</p>
+      </blockquote>
+      <figcaption>
+        <span class="name">Jason Burgess</span>
+        <span class="role">Chief Administrative Officer, City of Niagara Falls</span>
+      </figcaption>
+    </figure>
+
+    <figure class="quote" data-reveal>
+      <blockquote>
+        <p>&ldquo;These new residents will support local caf&eacute;s, restaurants, salons and shops, helping to create the lively, connected community we&rsquo;ve been working toward.&rdquo;</p>
+      </blockquote>
+      <figcaption>
+        <span class="name">Jim Diodati</span>
+        <span class="role">Mayor, City of Niagara Falls</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 7 · Downtown impact -->
+<section class="impact" aria-label="Downtown impact">
+  <div class="impact__media">
+    <img src="render-park.jpg" alt="Architectural rendering of Parkline Apartments viewed across open green space at sunset, downtown Niagara Falls" width="2200" height="1228" loading="lazy" data-parallax>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="impact__heading">
+      <div class="wrap">
+        <p class="label" data-reveal>Downtown Niagara Falls</p>
+        <h2 class="heading" data-reveal style="--d:.12s">Connected to the Heart of the&nbsp;City</h2>
+      </div>
+    </div>
+  </div>
+  <div class="impact__body">
+    <div class="wrap">
+      <div class="body-copy lede" data-reveal>
+        <p>Located steps from regional transit and surrounded by local businesses, Parkline Apartments is positioned to bring new energy to downtown Niagara Falls.</p>
+        <p>More than 300 new rental residences will support housing demand while introducing new customers to neighbourhood caf&eacute;s, restaurants, salons, shops and services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Groundbreaking -->
+<section class="section ground" id="groundbreaking" aria-label="Groundbreaking ceremony">
+  <div class="wrap">
+    <div class="siteline" data-reveal><span class="tick" aria-hidden="true"></span><span class="label label--ink">A Milestone Moment</span></div>
+    <div class="ground__head">
+      <h2 class="heading" data-reveal>Parkline Apartments Breaks Ground</h2>
+      <div class="body-copy lede" data-reveal style="--d:.15s">
+        <p>Elite Developments and the City of Niagara Falls officially marked the beginning of Parkline Apartments with a groundbreaking ceremony at 4500 Park Street.</p>
+        <p>The event brought together representatives from the City, Elite Developments, Brooklyn Construction and community partners to celebrate a shared commitment to new housing and the continued growth of downtown Niagara Falls.</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery__row">
+        <figure class="gfig g-full">
+          <div class="mask" data-mask>
+            <img src="gb-group.jpg" alt="A large group of project partners turning soil with gold shovels at the Parkline Apartments groundbreaking ceremony" width="2000" height="1335" loading="lazy">
+          </div>
+          <figcaption>Official groundbreaking at 4500 Park Street</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery__row">
+        <figure class="gfig g-a1">
+          <div class="mask" data-mask>
+            <img src="gb-aerial.jpg" alt="Aerial view of the groundbreaking ceremony site at 4500 Park Street, with the event tent and excavators below" width="1000" height="1778" loading="lazy">
+          </div>
+          <figcaption>The ceremony from above</figcaption>
+        </figure>
+        <figure class="gfig g-a2">
+          <div class="mask" data-mask>
+            <img src="gb-shovels.jpg" alt="A row of Elite Developments branded gold shovels standing in the soil before the ceremony" width="1400" height="935" loading="lazy">
+          </div>
+          <figcaption>Ready to break ground</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery__row">
+        <figure class="gfig g-b1">
+          <div class="mask" data-mask>
+            <img src="gb-backdrop.jpg" alt="Representatives from Elite Developments and the City of Niagara Falls holding shovels in front of the partnership backdrop" width="1400" height="935" loading="lazy">
+          </div>
+          <figcaption>Representatives from Elite Developments, the City of Niagara Falls and project partners</figcaption>
+        </figure>
+        <figure class="gfig g-b2">
+          <div class="mask" data-mask>
+            <img src="gb-podium.jpg" alt="A speaker addressing guests at the podium during the Parkline Apartments groundbreaking ceremony" width="1000" height="1500" loading="lazy">
+          </div>
+        </figure>
+      </div>
+
+      <div class="gallery__row">
+        <figure class="gfig g-c1">
+          <div class="mask" data-mask>
+            <img src="gb-shovel-close.jpg" alt="Close-up of an Elite Developments branded shovel standing in freshly turned earth" width="1000" height="1500" loading="lazy">
+          </div>
+        </figure>
+        <figure class="gfig g-c2">
+          <div class="mask" data-mask>
+            <img src="gb-signage.jpg" alt="An excavator beside Park Street project signage featuring the City of Niagara Falls and Elite Developments marks" width="1400" height="935" loading="lazy">
+          </div>
+          <figcaption>Work begins on Park Street</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery__row">
+        <figure class="gfig g-d">
+          <div class="mask" data-mask>
+            <img src="gb-tent.jpg" alt="Guests and project partners gathered under the event tent at the groundbreaking celebration" width="1400" height="933" loading="lazy">
+          </div>
+          <figcaption>A landmark partnership taking shape in downtown Niagara Falls</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 9 · Contact -->
+<section class="section contact" id="contact" aria-label="Contact">
+  <div class="wrap">
+    <p class="label" data-reveal>Coming Soon</p>
+    <h2 class="heading" data-reveal style="--d:.12s">More Is Coming</h2>
+    <p class="lede contact__copy" data-reveal style="--d:.24s">Parkline Apartments is taking shape in the heart of downtown Niagara Falls. Additional project information will be released as the community progresses.</p>
+    <div class="contact__links">
+      <a href="tel:+18444844184" data-reveal style="--d:.34s">1.844.484.4184</a>
+      <a href="mailto:sales@elitedevelopments.com" data-reveal style="--d:.44s">sales@elitedevelopments.com</a>
+    </div>
+    <div data-reveal style="--d:.54s">
+      <a class="btn btn--ink" href="mailto:sales@elitedevelopments.com">
+        Contact Elite Developments
+        <svg width="12" height="11" viewBox="0 0 12 11" fill="none" aria-hidden="true"><path d="M0.5 5.5h10M6.5 1l4.5 4.5L6.5 10" stroke="currentColor" stroke-width="1.2"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 10 · Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#top" aria-label="Parkline Apartments, back to top">
+          <img src="logo-parkline.png" alt="Parkline Apartments" width="1400" height="528" loading="lazy">
+        </a>
+      </div>
+      <div class="footer__partners">
+        <span class="label">In Partnership With</span>
+        <div class="marks">
+          <img src="logo-elite-dark.png" alt="Elite Developments" width="1000" height="272" loading="lazy">
+          <img class="nf" src="logo-nf.svg" alt="City of Niagara Falls" width="820" height="295" loading="lazy">
+        </div>
+      </div>
+      <div class="footer__contact">
+        <p class="addr">4500 Park Street<br>Niagara Falls, Ontario</p>
+        <p>
+          <a href="tel:+18444844184">1.844.484.4184</a><br>
+          <a href="mailto:sales@elitedevelopments.com">sales@elitedevelopments.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="legal">All renderings and illustrations are artist's concepts and are subject to change. Project details are provided for general information and may be updated without notice. E. &amp; O.E.</p>
+      <p>&copy; <span id="year">2026</span> Parkline Apartments</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Preloader */
+  function ready(){
+    setTimeout(function(){ document.documentElement.classList.add('is-loaded'); }, reduced ? 0 : 1250);
+  }
+  if(document.readyState === 'complete'){ ready(); }
+  else { window.addEventListener('load', ready); }
+  /* Safety: never trap the visitor behind the loader */
+  setTimeout(function(){ document.documentElement.classList.add('is-loaded'); }, 3500);
+
+  /* Navigation solidity */
+  var nav = document.getElementById('nav');
+  function onScrollNav(){
+    if(window.scrollY > 40){ nav.classList.add('is-solid'); }
+    else { nav.classList.remove('is-solid'); }
+  }
+  window.addEventListener('scroll', onScrollNav, {passive:true});
+  onScrollNav();
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  function setMenu(open){
+    menu.classList.toggle('is-open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){
+    setMenu(!menu.classList.contains('is-open'));
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menu.classList.contains('is-open')){ setMenu(false); burger.focus(); }
+  });
+
+  /* Reveal on scroll */
+  var revealables = document.querySelectorAll('[data-reveal], .siteline, [data-mask]');
+  if('IntersectionObserver' in window && !reduced){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -6% 0px'});
+    revealables.forEach(function(el){ io.observe(el); });
+  } else {
+    revealables.forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  /* Restrained parallax on the impact image */
+  var para = document.querySelector('[data-parallax]');
+  if(para && !reduced && window.innerWidth > 900){
+    var ticking = false;
+    function parallax(){
+      var holder = para.parentElement;
+      var rect = holder.getBoundingClientRect();
+      var vh = window.innerHeight;
+      if(rect.bottom > 0 && rect.top < vh){
+        var progress = (rect.top + rect.height/2 - vh/2) / (vh/2 + rect.height/2);
+        para.style.transform = 'translateY(' + (progress * -4) + '%)';
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!ticking){ requestAnimationFrame(parallax); ticking = true; }
+    }, {passive:true});
+    parallax();
+  }
+
+  /* Year */
+  var y = document.getElementById('year');
+  if(y){ y.textContent = String(new Date().getFullYear()); }
+})();
+</script>
+
+</body>
+</html>
