@@ -365,9 +365,10 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 }
 
 /* ---------- full-width rendering band ---------- */
-.showcase{background:var(--paper)}
-.showcase .mask{height:clamp(360px,60vh,640px)}
-.showcase img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.showcase{background:var(--ink)}
+.showcase .wrap{padding-top:0;padding-bottom:0}
+.showcase .mask{width:100%}
+.showcase img{width:100%;height:auto;display:block}
 
 /* ---------- partnership (dark) ---------- */
 
@@ -430,25 +431,19 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 /* ---------- downtown impact ---------- */
 
 .impact{padding:0;background:var(--paper)}
-.impact__media{position:relative;height:clamp(420px,78vh,760px);overflow:hidden}
-.impact__media img{
-  width:100%;height:118%;object-fit:cover;object-position:center 60%;
-  will-change:transform;
-}
-.impact__media .scrim{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(14,13,11,.5),rgba(14,13,11,0) 45%);
-}
-.impact__heading{
-  position:absolute;left:0;right:0;bottom:clamp(40px,6vw,80px);
-  color:var(--paper);
-}
-.impact__heading .label{color:rgba(250,248,245,.72);margin-bottom:16px}
+.impact__media{width:100%}
+.impact__media .mask{width:100%}
+.impact__media img{width:100%;height:auto;display:block}
 .impact__body{
-  padding:clamp(64px,8vw,120px) 0;
+  padding:clamp(56px,7vw,104px) 0;
 }
-.impact__body .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,3vw,48px)}
-.impact__body .lede{grid-column:3/11}
+.impact__body-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);
+  gap:clamp(24px,3vw,48px);align-items:start;
+}
+.impact__intro{grid-column:1/6}
+.impact__intro .label{margin-bottom:16px}
+.impact__body .lede{grid-column:7/12}
 
 /* ---------- groundbreaking ---------- */
 
@@ -538,7 +533,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
   .intro__text,.intro__media{grid-column:1/-1}
   .intro__text .heading{max-width:none}
   .partnership__lead,.partnership__copy{grid-column:1/-1}
-  .impact__body .lede{grid-column:1/-1}
+  .impact__intro,.impact__body .lede{grid-column:1/-1}
   .footer__top{grid-template-columns:1fr 1fr}
   .footer__brand{grid-column:1/-1}
   .footer__partners{grid-column:1/2}
@@ -579,7 +574,6 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
   .mask img{transform:none}
   .hero__media img{transform:none}
   .hero__scroll::after{animation:none}
-  .impact__media img{height:100%}
   .loader{display:none}
 }
 </style>
@@ -728,7 +722,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 <!-- Full-width rendering band -->
 <section class="showcase" aria-label="Parkline Apartments rendering">
   <div class="mask" data-mask>
-    <img src="render-park.jpg" alt="Architectural rendering of Parkline Apartments seen from across the street at dusk, showing the full 10-storey elevation and brick podium" width="2000" height="1116" loading="lazy">
+    <img src="render-park.jpg" alt="Architectural rendering of Parkline Apartments seen from across the street at dusk, showing the full 10-storey elevation and brick podium" width="2560" height="1429" loading="lazy">
   </div>
 </section>
 
@@ -798,18 +792,17 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 <!-- 7 · Downtown impact -->
 <section class="impact" aria-label="Downtown impact">
   <div class="impact__media">
-    <img src="niagara-falls.jpg" alt="Aerial view of Niagara Falls and the surrounding downtown, with the American Falls, the Niagara River and the city beyond" width="2200" height="1468" loading="lazy" data-parallax>
-    <div class="scrim" aria-hidden="true"></div>
-    <div class="impact__heading">
-      <div class="wrap">
-        <p class="label" data-reveal>Downtown Niagara Falls</p>
-        <h2 class="heading" data-reveal style="--d:.12s">Connected to the Heart of the&nbsp;City</h2>
-      </div>
+    <div class="mask" data-mask>
+      <img src="niagara-falls.jpg" alt="Aerial view of Niagara Falls and the surrounding downtown, with the American Falls, the Niagara River and the city beyond" width="2600" height="1735" loading="lazy">
     </div>
   </div>
   <div class="impact__body">
-    <div class="wrap">
-      <div class="body-copy lede" data-reveal>
+    <div class="wrap impact__body-grid">
+      <div class="impact__intro">
+        <p class="label" data-reveal>Downtown Niagara Falls</p>
+        <h2 class="heading" data-reveal style="--d:.1s">Connected to the Heart of the&nbsp;City</h2>
+      </div>
+      <div class="body-copy lede" data-reveal style="--d:.18s">
         <p>Located steps from regional transit and surrounded by local businesses, Parkline Apartments is positioned to bring new energy to downtown Niagara Falls.</p>
         <p>More than 300 new rental residences will support housing demand while introducing new customers to neighbourhood caf&eacute;s, restaurants, salons, shops and services.</p>
       </div>
