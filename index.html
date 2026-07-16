@@ -202,7 +202,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 }
 .nav__links a:hover::after,.nav__links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
 
-.nav__burger{display:none;flex-direction:column;gap:6px;padding:10px 2px;z-index:130}
+.nav__burger{display:none;flex-direction:column;gap:6px;padding:12px 8px;margin-right:-8px;z-index:130}
 .nav__burger span{display:block;width:26px;height:1.5px;background:var(--ink);transition:transform .45s var(--ease),opacity .3s}
 .nav__burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 .nav__burger[aria-expanded="true"] span:nth-child(2){opacity:0}
@@ -404,29 +404,29 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 
 /* ---------- quotes ---------- */
 
-.quotes .siteline{margin-bottom:clamp(36px,4vw,56px)}
-.quote{
-  max-width:880px;
-  padding:clamp(36px,4vw,56px) 0;
-  border-bottom:1px solid var(--hairline);
+.quotes .siteline{margin-bottom:clamp(32px,3.5vw,48px)}
+.quotes__grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(28px,3vw,52px);
 }
-.quote:first-of-type{border-top:1px solid var(--hairline)}
-.quote:nth-of-type(even){margin-left:auto}
+.quote{
+  padding:0;border:0;max-width:none;margin:0;
+  border-top:1px solid var(--hairline);padding-top:28px;
+}
 .quote blockquote{
-  font-size:clamp(22px,2.6vw,36px);
-  line-height:1.38;letter-spacing:-.015em;font-weight:400;
+  font-size:clamp(17px,1.35vw,20px);
+  line-height:1.5;letter-spacing:-.01em;font-weight:400;
   color:var(--ink);
-  text-indent:-.45em;
 }
 .quote figcaption{
-  margin-top:34px;display:flex;flex-direction:column;gap:3px;
-  font-size:14px;line-height:1.6;
+  margin-top:22px;display:flex;flex-direction:column;gap:2px;
+  font-size:13px;line-height:1.55;
 }
 .quote figcaption::before{
-  content:"";width:40px;height:1px;background:var(--gold);margin-bottom:14px;
+  content:"";width:28px;height:1px;background:var(--gold);margin-bottom:12px;
 }
 .quote figcaption .name{font-weight:500;letter-spacing:.02em}
-.quote figcaption .role{color:var(--grey);font-size:13px;letter-spacing:.05em}
+.quote figcaption .role{color:var(--grey);font-size:12px;letter-spacing:.04em}
 
 /* ---------- downtown impact ---------- */
 
@@ -465,6 +465,13 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 .g-b2{grid-column:9/13;margin-top:clamp(30px,4vw,80px)}
 .g-c1{grid-column:1/5}
 .g-c2{grid-column:5/13;margin-top:clamp(30px,4vw,72px)}
+/* Uniform equal-size square trio */
+.gallery__trio{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(20px,3vw,48px);align-items:start;
+}
+.gallery__trio .mask{aspect-ratio:1/1}
+.gallery__trio .mask img{width:100%;height:100%;object-fit:cover;display:block}
 .g-d{grid-column:3/11}
 
 /* ---------- contact ---------- */
@@ -548,20 +555,52 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
   .fact__label{text-align:right}
   .nav__links{display:none}
   .nav__burger{display:flex}
-  .quote:nth-of-type(even){margin-left:0}
+  .quotes__grid{grid-template-columns:1fr 1fr;gap:32px}
   .gallery__row{grid-template-columns:1fr}
+  .gallery__trio{grid-template-columns:1fr 1fr;gap:16px}
   .g-a1,.g-a2,.g-b1,.g-b2,.g-c1,.g-c2,.g-d,.g-full{grid-column:1/-1;margin-top:0}
   .g-a1,.g-c1{max-width:78%}
   .g-b2{max-width:64%;margin-left:auto}
   .hero__scroll{display:none}
 }
 
+@media (max-width:820px){
+  .footer__contact a{display:inline-block;padding:6px 0}
+}
+
 @media (max-width:620px){
   .footer__top{grid-template-columns:1fr}
   .footer__partners,.footer__contact{grid-column:1/-1}
   .partners__inner{flex-direction:column;gap:24px}
+  .gallery__trio{grid-template-columns:1fr;gap:20px}
   .partnership__marks{flex-direction:column;align-items:stretch}
   .partnership__divider{width:100%;height:1px}
+  /* Comfortable tap targets for footer contact links */
+  .footer__contact a{display:inline-block;padding:6px 0;min-height:24px}
+  .footer__contact .addr{margin-bottom:18px}
+  /* Slightly airier hero heading so a two-line wrap breathes */
+  .hero h1{line-height:1.05}
+  /* Trim vertical rhythm so there is less scrolling on phones */
+  .section{padding:72px 0}
+  .quotes .siteline{margin-bottom:28px}
+  .quotes__grid{grid-template-columns:1fr;gap:0}
+  .quote{padding-top:24px;margin-top:24px}
+  .quote:first-child{margin-top:0}
+  .impact__body{padding:56px 0}
+  /* Keep the intro heading and copy comfortably separated */
+  .impact__intro{margin-bottom:24px}
+  .footer__partners .marks{gap:24px}
+}
+
+@media (max-width:400px){
+  :root{--gutter:18px}
+  .hero__facts{font-size:11.5px;gap:10px}
+  .fact__num{font-size:52px}
+}
+
+/* Larger, easier-to-tap contact links on touch devices */
+@media (hover:none) and (pointer:coarse){
+  .nav__links a,.menu a{padding-top:10px;padding-bottom:10px}
 }
 
 /* ---------- reduced motion ---------- */
@@ -686,7 +725,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
       <div class="intro__media">
         <figure class="gfig">
           <div class="mask" data-mask>
-            <img src="render-4500.jpg" alt="Architectural rendering of the Parkline Apartments street-level entrance at 4500 Park Street, with brick detailing and double-height glazing" width="1500" height="851" loading="lazy">
+            <img src="render-4500.jpg" srcset="render-4500-900.jpg 900w, render-4500.jpg 1500w" sizes="(max-width:1020px) 100vw, 50vw" alt="Architectural rendering of the Parkline Apartments street-level entrance at 4500 Park Street, with brick detailing and double-height glazing" width="1500" height="851" loading="lazy">
           </div>
           <figcaption class="intro__caption">Artist's concept, 4500 Park Street entrance</figcaption>
         </figure>
@@ -722,7 +761,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 <!-- Full-width rendering band -->
 <section class="showcase" aria-label="Parkline Apartments rendering">
   <div class="mask" data-mask>
-    <img src="render-park.jpg" alt="Architectural rendering of Parkline Apartments seen from across the street at dusk, showing the full 10-storey elevation and brick podium" width="2560" height="1429" loading="lazy">
+    <img src="render-park.jpg" srcset="render-park-900.jpg 900w, render-park.jpg 2560w" sizes="100vw" alt="Architectural rendering of Parkline Apartments seen from across the street at dusk, showing the full 10-storey elevation and brick podium" width="2560" height="1429" loading="lazy">
   </div>
 </section>
 
@@ -757,35 +796,37 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
   <div class="wrap">
     <div class="siteline" data-reveal><span class="tick" aria-hidden="true"></span><span class="label label--ink">In Their Words</span></div>
 
-    <figure class="quote" data-reveal>
-      <blockquote>
-        <p>&ldquo;Niagara Falls has set a standard. You&rsquo;re showing the province what can be achieved when the goal is shared and the process is driven by teamwork.&rdquo;</p>
-      </blockquote>
-      <figcaption>
-        <span class="name">Hamid Hakimi</span>
-        <span class="role">Chief Executive Officer, Elite Developments</span>
-      </figcaption>
-    </figure>
+    <div class="quotes__grid">
+      <figure class="quote" data-reveal>
+        <blockquote>
+          <p>&ldquo;Niagara Falls has set a standard. You&rsquo;re showing the province what can be achieved when the goal is shared and the process is driven by teamwork.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <span class="name">Hamid Hakimi</span>
+          <span class="role">Chief Executive Officer, Elite Developments</span>
+        </figcaption>
+      </figure>
 
-    <figure class="quote" data-reveal>
-      <blockquote>
-        <p>&ldquo;By contributing the land and working collaboratively with Elite Developments, we&rsquo;re delivering a project that adds affordable housing and creates long-term financial value for our residents.&rdquo;</p>
-      </blockquote>
-      <figcaption>
-        <span class="name">Jason Burgess</span>
-        <span class="role">Chief Administrative Officer, City of Niagara Falls</span>
-      </figcaption>
-    </figure>
+      <figure class="quote" data-reveal style="--d:.1s">
+        <blockquote>
+          <p>&ldquo;By contributing the land and working collaboratively with Elite Developments, we&rsquo;re delivering a project that adds affordable housing and creates long-term financial value for our residents.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <span class="name">Jason Burgess</span>
+          <span class="role">Chief Administrative Officer, City of Niagara Falls</span>
+        </figcaption>
+      </figure>
 
-    <figure class="quote" data-reveal>
-      <blockquote>
-        <p>&ldquo;These new residents will support local caf&eacute;s, restaurants, salons and shops, helping to create the lively, connected community we&rsquo;ve been working toward.&rdquo;</p>
-      </blockquote>
-      <figcaption>
-        <span class="name">Jim Diodati</span>
-        <span class="role">Mayor, City of Niagara Falls</span>
-      </figcaption>
-    </figure>
+      <figure class="quote" data-reveal style="--d:.2s">
+        <blockquote>
+          <p>&ldquo;These new residents will support local caf&eacute;s, restaurants, salons and shops, helping to create the lively, connected community we&rsquo;ve been working toward.&rdquo;</p>
+        </blockquote>
+        <figcaption>
+          <span class="name">Jim Diodati</span>
+          <span class="role">Mayor, City of Niagara Falls</span>
+        </figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -793,7 +834,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 <section class="impact" aria-label="Downtown impact">
   <div class="impact__media">
     <div class="mask" data-mask>
-      <img src="niagara-falls.jpg" alt="Aerial view of Niagara Falls and the surrounding downtown, with the American Falls, the Niagara River and the city beyond" width="2600" height="1735" loading="lazy">
+      <img src="niagara-falls.jpg" srcset="niagara-falls-900.jpg 900w, niagara-falls.jpg 2600w" sizes="100vw" alt="Aerial view of Niagara Falls and the surrounding downtown, with the American Falls, the Niagara River and the city beyond" width="2600" height="1735" loading="lazy">
     </div>
   </div>
   <div class="impact__body">
@@ -827,7 +868,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
       <div class="gallery__row">
         <figure class="gfig g-full">
           <div class="mask" data-mask>
-            <img src="gb-group.jpg" alt="Project partners lined up with gold shovels at a mound of soil during the Parkline Apartments groundbreaking ceremony at 4500 Park Street" width="2000" height="1335" loading="lazy">
+            <img src="gb-group.jpg" srcset="gb-group-900.jpg 900w, gb-group.jpg 2000w" sizes="100vw" alt="Project partners lined up with gold shovels at a mound of soil during the Parkline Apartments groundbreaking ceremony at 4500 Park Street" width="2000" height="1335" loading="lazy">
           </div>
           <figcaption>Official groundbreaking at 4500 Park Street</figcaption>
         </figure>
@@ -848,6 +889,27 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
         </figure>
       </div>
 
+      <div class="gallery__trio">
+        <figure class="gfig">
+          <div class="mask" data-mask>
+            <img src="gb-trio.jpg" srcset="gb-trio-540.jpg 540w, gb-trio.jpg 1100w" sizes="(max-width:860px) 100vw, 33vw" alt="Three project partners in conversation beside a CAT excavator at the 4500 Park Street groundbreaking" width="1100" height="1100" loading="lazy">
+          </div>
+          <figcaption>On site at 4500 Park Street</figcaption>
+        </figure>
+        <figure class="gfig">
+          <div class="mask" data-mask>
+            <img src="gb-banner-shovels.jpg" srcset="gb-banner-shovels-540.jpg 540w, gb-banner-shovels.jpg 1100w" sizes="(max-width:860px) 100vw, 33vw" alt="An Elite Developments hard hat and gold ceremonial shovels in front of the Parkline Apartments banner reading Your Life In Perfect Proximity" width="1100" height="1100" loading="lazy">
+          </div>
+          <figcaption>Ready to break ground</figcaption>
+        </figure>
+        <figure class="gfig">
+          <div class="mask" data-mask>
+            <img src="gb-falls-aerial.jpg" srcset="gb-falls-aerial-540.jpg 540w, gb-falls-aerial.jpg 1100w" sizes="(max-width:860px) 100vw, 33vw" alt="Aerial view of Niagara Falls and the downtown core near the Parkline Apartments site" width="1100" height="1100" loading="lazy">
+          </div>
+          <figcaption>Minutes from the Falls</figcaption>
+        </figure>
+      </div>
+
       <div class="gallery__row">
         <figure class="gfig g-b1">
           <div class="mask" data-mask>
@@ -857,24 +919,9 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
         </figure>
         <figure class="gfig g-b2">
           <div class="mask" data-mask>
-            <img src="gb-tent.jpg" alt="A black Elite Developments hard hat resting on a ceremonial shovel in front of the Parkline Apartments banner" width="1400" height="933" loading="lazy">
+            <img src="gb-podium-speaker.jpg" srcset="gb-podium-speaker-900.jpg 900w, gb-podium-speaker.jpg 1400w" sizes="(max-width:860px) 100vw, 33vw" alt="An Elite Developments representative speaking at the podium in front of the Elite Developments and City of Niagara Falls backdrop during the groundbreaking ceremony" width="1400" height="935" loading="lazy">
           </div>
-          <figcaption>Ready to break ground</figcaption>
-        </figure>
-      </div>
-
-      <div class="gallery__row">
-        <figure class="gfig g-c1">
-          <div class="mask" data-mask>
-            <img src="gb-podium.jpg" alt="The event backdrop repeating the Elite Developments and City of Niagara Falls marks at the Parkline Apartments groundbreaking" width="1000" height="1500" loading="lazy">
-          </div>
-          <figcaption>A shared identity</figcaption>
-        </figure>
-        <figure class="gfig g-c2">
-          <div class="mask" data-mask>
-            <img src="gb-backdrop.jpg" alt="Three project partners in conversation beside a CAT excavator at the 4500 Park Street groundbreaking" width="1400" height="935" loading="lazy">
-          </div>
-          <figcaption>On site at 4500 Park Street</figcaption>
+          <figcaption>Marking the milestone</figcaption>
         </figure>
       </div>
 
